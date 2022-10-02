@@ -109,6 +109,7 @@ venv/
 ENV/
 env.bak/
 venv.bak/
+bankscraper/
 
 # Spyder project settings
 .spyderproject
