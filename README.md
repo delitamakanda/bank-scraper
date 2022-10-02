@@ -9,8 +9,8 @@ python3 -m venv bankscraper
 source bankscraper/bin/activate
 ```
 
-scrape bnp paribas particulier
+scrape fortuneo.fr
 
 ```bash
-python3 scrapers/scraper_bnp.py <client_secret> <secret_code>
+python3 scrapers/scraper_fortuneo.py <client_secret> <secret_code>
 ```
