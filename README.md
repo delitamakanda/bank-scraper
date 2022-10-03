@@ -14,3 +14,17 @@ scrape fortuneo.fr
 ```bash
 python3 scrapers/scraper_fortuneo.py <client_secret> <secret_code>
 ```
+
+```bash
+uvicorn main:app --host 0.0.0.0 --reload # goto 0.0.0.0:8000 in the browser
+```
+
+```bash
+celery -A worker.celery worker --logfile=logs/celery.log
+```
+
+test app with pytest
+
+```bash
+python -m pytest
+```
