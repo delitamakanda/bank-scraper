@@ -47,7 +47,7 @@ login_submit = WebDriverWait(browser, 20).until(EC.element_to_be_clickable((By.X
 login_submit.click()
 
 time.sleep(2)
-# print(driver.page_source)
+print(browser.page_source)
 
 # quit browser
 browser.quit()
