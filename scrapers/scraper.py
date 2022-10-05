@@ -52,6 +52,8 @@ def scrape():
 
     login_submit.click()
 
+    # todo: display output blocked by iframe
+    
     html = browser.page_source
     output = parse_html(html)
     print(output)
