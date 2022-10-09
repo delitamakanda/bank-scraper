@@ -52,18 +52,19 @@ def scrape():
 
     login_submit.click()
 
-    # todo: display output blocked by iframe
+    # display bank account blocked by iframe
+    iframe = WebDriverWait(browser, 20).until(EC.frame_to_be_available_and_switch_to_it((By.XPATH, '//*[@id="iframe_centrale"]')))
     
     html = browser.page_source
     output = parse_html(html)
-    print(output)
+    # print(output)
 
 
 def parse_html(html):
     soup = BeautifulSoup(html, "html.parser")
     print(soup.prettify())
-    account_synthese = []
-    return account_synthese
+    # account_synthese = []
+    return []
 
 
 if __name__ == "__main__":
