@@ -57,14 +57,20 @@ def scrape():
     
     html = browser.page_source
     output = parse_html(html)
-    # print(output)
+    print("output", output)
 
 
 def parse_html(html):
     soup = BeautifulSoup(html, "html.parser")
-    print(soup.prettify())
-    # account_synthese = []
-    return []
+    account_synthese = []
+    for row in soup.find_all("div", { 'id': 'synthese'}):
+        account = {}
+        account["account_number"] = row.find("span", class_="synthese_numero_compte").text.strip()
+        account["account_name"] = row.find("a", class_="synthese_id_compte").text.strip()
+        account["account_balance"] = row.find("span", class_="synthese_solde_compte").text.strip()
+        account_synthese.append(account)
+        # print("account", account)
+    return account_synthese
 
 
 if __name__ == "__main__":
