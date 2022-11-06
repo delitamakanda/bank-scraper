@@ -12,7 +12,13 @@ source bankscraper/bin/activate
 scrape fortuneo.fr
 
 ```bash
-python3 scrapers/scraper.py <client_secret> <secret_code> headless # mode debug
+python3 scrapers/scraper.py <client_secret> <secret_code> fortuneo headless # mode debug
+```
+
+scrape vie plus suravenir
+
+```bash
+python3 scrapers/scraper.py <client_secret> <secret_code> vieplus headless # mode debug
 ```
 
 ```bash
